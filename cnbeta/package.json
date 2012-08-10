@@ -1,4 +1,4 @@
 {
-   "name":"hello cnae",
-   "main":"./server.js"
+   "name":"cnbeta rss",
+   "main":"./app.js"
 }
