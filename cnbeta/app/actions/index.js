@@ -1,4 +1,7 @@
 exports = module.exports = function(req, res, config){
+	this.app;
 
-	return {'test' : '中文'};
+	this.execute = function(){
+		return {'tetst' : 'ok'};
+	};
 };
