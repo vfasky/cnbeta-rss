@@ -14,3 +14,7 @@ results
 node_modules
 npm-debug.log
 cnbeta/.naeindex
+
+cnbeta/.DS_Store
+
+.DS_Store
