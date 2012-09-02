@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>cnbeta 热门评论；全文版</title>
+        <link>{{host}}</link>
+        <language>zh-CN</language>
+        <description>精心制作cnbeta 全文 + 评论 的Rss</description>
+        <pubDate>{{pubDate}}</pubDate>
+        {{#articles}}
+        <item>
+          <title><![CDATA[ {{title}} ]]></title>
+          <link>{{link}}</link>       
+          <guid>{{link}}</guid>
+          <pubDate>{{date}}</pubDate>
+          <content:encoded><![CDATA[ 
+          	{{#if comments}}
+          	<h4>热门评论</h4>
+          	<dl>
+          	{{#comments}}
+          		<dt>{{{title}}}</dt>
+          		<dd>{{{body}}}</dd>
+          	{{/comments}}
+          	</dl>
+          	<hr/>
+          	{{/if}}
+          	{{{content}}} 
+          ]]></content:encoded>
+        </item>
+        {{/articles}}
+    </channel>
+</rss>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>{{article.title}}</title>
+	<link rel="stylesheet" href="/static/style/default.css">
+</head>
+<body>
+	
+	<div class="wrap article">
+		<h1> 
+			<a target="_blank" href="http://cnbeta.com/articles/{{article.article_id}}.htm">
+				{{article.title}}
+			</a>
+    	</h1>
+
+    	<div class="content">
+    		{ 分类 : {{type.title}} }
+    		{{{article.content}}}
+    	</div>
+
+    	<div class="comment">
+    		<a href="?uc=true" class="update">
+    			更新热门评论
+    		</a>
+    		{{#article.comments}}
+    		<dl>  			
+    			<dt>{{{title}}}</dt>
+    			<dd>{{{body}}}</dd>
+    		</dl>
+    		{{/article.comments}}
+
+    		<div class="powered">
+				Powered by : 
+				<a href="http://nodejs.org/" target="_blank">nodejs</a> /
+				<a href="http://www.mongodb.org/" target="_blank">mongoDb</a>
+			</div>
+    	</div>
+	</div>
+
+
+</body>
+</html>

@@ -1,25 +1,18 @@
-/***
- * 如果开启了mongoDB,将下面代码注释去掉，
- * 并将dbUserName, dbPassword和dbName都
- * 替换成分配得到的值。即可查看 mongoDB
- * 测试程序。否则则开启hello world程序。
- ***/
-/*
-var mongo = require("mongoskin");
-var db_url = exports.db_url = "dbUserName:dbPassword@127.0.0.1:20088/dbName";
-exports.db = mongo.db(db_url);
-*/
+var mongoose = require('mongoose');
+
 
 //环境变量
 exports.app = {
-    'runMode' : 'devel', //应用运行模式: devel、test 、deploy  三种
+    'runMode' : 'deploy', //应用运行模式: devel、test 、deploy  三种
 
 	'devel' : {
-		'port' : 1337
+		'port' : 1337 ,
+		'db' : 'mongodb://127.0.0.1:27017/cnbeta'
 	},
 
 	'deploy' : {
-		'port' : 80
+		'port' : 80 ,
+		'db' : 'mongodb://127.0.0.1:27017/cnbeta'
 	}
 };
 
@@ -54,3 +47,4 @@ exports.get = function(path,def){
 	var soure = exports.app[ exports.app['runMode'] ];
 	return _get(soure,0,_toArray(path),def);
 };
+
