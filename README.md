@@ -11,10 +11,9 @@ cnbeta-rss
 demo : 
 ==========
 
- - [http://cnbeta.cnodejs.net](http://cnbeta.cnodejs.net )  NAE 云引擎
+ - http://cnbeta.cnodejs.net    NAE 云引擎
  
- - [http://vfasky.hp.af.cm/](http://vfasky.hp.af.cm/) appfog 云引擎
- 
+ - http://vfasky.hp.af.cm    appfog 云引擎
  
 版权声明 : 
 ==========
