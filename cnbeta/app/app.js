@@ -1,5 +1,5 @@
 var util       = require('../util');
-var Handlebars = require('handlebars').Handlebars;
+var Handlebars = require('handlebars');
 var fs         = require('fs');
 var path       = require('path');
 var url        = require('url');
